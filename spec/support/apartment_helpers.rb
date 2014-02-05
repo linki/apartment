@@ -30,11 +30,11 @@ module Apartment
     end
 
     def migrate
-      ActiveRecord::Migrator.migrate(Rails.root + ActiveRecord::Migrator.migrations_path)
+      ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths)
     end
 
     def rollback
-      ActiveRecord::Migrator.rollback(Rails.root + ActiveRecord::Migrator.migrations_path)
+      ActiveRecord::Migrator.rollback(ActiveRecord::Migrator.migrations_paths)
     end
 
   end
